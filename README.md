@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Menu Italiano
 
-## Getting Started
+Menú digital interactivo para un restaurante italiano, construido con **Next.js 15**, **TypeScript** y **Tailwind CSS**. Permite a los clientes explorar las categorías del menú con imágenes, descripciones y precios en una interfaz limpia y responsiva.
 
-First, run the development server:
+🔗 **Demo en vivo:** [menu-italiano.vercel.app](https://menu-italiano.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Características
+
+- Navegación por categorías: Pasta, Pizza, Antipasti, Secondi Piatti, Postres y Bebidas
+- Rutas dinámicas con App Router de Next.js (`/menu/[slug]`)
+- Imágenes optimizadas con el componente `next/image`
+- Diseño responsivo adaptado a móvil y escritorio
+- Animaciones suaves con Tailwind CSS (`hover:scale`, `transition`)
+
+---
+
+## 🛠️ Tecnologías
+
+| Tecnología | Versión |
+|---|---|
+| Next.js | ^16.1.4 |
+| React | ^18.2.0 |
+| TypeScript | ^5 |
+| Tailwind CSS | ^4 |
+| Lucide React | ^0.562.0 |
+| Node.js | 20.x |
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+Menu-italiano/
+├── app/
+│   ├── page.tsx          # Página principal con grid de categorías
+│   ├── layout.tsx        # Layout global
+│   └── menu/
+│       └── [slug]/
+│           └── page.tsx  # Página dinámica por categoría
+├── public/
+│   ├── antipasti/
+│   ├── bebidas/
+│   ├── food-grid/
+│   ├── pasta/
+│   ├── pizza/
+│   ├── postres/
+│   └── secondipiatti/
+├── package.json
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Instalación y uso local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Richie-270/Menu-italiano.git
 
-## Learn More
+# 2. Entrar al directorio
+cd Menu-italiano
 
-To learn more about Next.js, take a look at the following resources:
+# 3. Instalar dependencias
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 4. Iniciar servidor de desarrollo
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Scripts disponibles
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Build de producción
+npm run start    # Servidor de producción
+npm run lint     # Linter con ESLint
+```
+
+---
+
+## 🌐 Deploy
+
+El proyecto está desplegado en **Vercel** con deploy automático al hacer push a la rama `main`.
+
+---
+
+## 👨‍💻 Autor
+
+**Ricardo** — [@Richie-270](https://github.com/Richie-270) · [LinkedIn](https://linkedin.com/in/ricardodev27)
