@@ -45,20 +45,20 @@ const DataMenu: Record<string, Menuitem[]> = {
       description:
         "Pizza clásica con salsa de tomate, mozzarella fresca y albahaca. de pasta rellenas con carne o verduras, y queso gratinado al horno",
       price: "18.00$",
-      image: "/pizza/pizza Margherita.jpg",
+      image: "/pizza/pizza-Margherita.jpg",
     },
     {
       name: "Pepperoni",
       description:
         "Mozzarella italiana y pepperoni curado sobre base de tomate artesanal, mozzarella fresca.",
       price: "18.00$",
-      image: "/pizza/pepperoni.jpg",
+      image: "/pizza/Pepperoni.jpg",
     },
     {
       name: "Quattro Formaggi",
       description:"Mozzarella, gorgonzola, parmesano y ricott.",
       price: "18.00$",
-      image: "/pizza/cuatro quesos.jpg",
+      image: "/pizza/cuatro-quesos.jpg",
     },
     {
       name: "Pizza Vegetariana",
@@ -75,28 +75,28 @@ const DataMenu: Record<string, Menuitem[]> = {
       description:
         "PPan artesanal tostado, cubierto con tomate fresco en cubos, ajo, albahaca y un toque de aceite de oliva extra virgen.",
       price: "18.00$",
-      image: "/antipasti/Bruschetta al Pomodoro.jpg",
+      image: "/antipasti/Bruschetta-al-Pomodoro.jpg",
     },
     {
       name: "Caprese",
       description:
         "Finas rodajas de tomate fresco y mozzarella italiana, acompañadas de albahaca y aceite de oliva extra virgen.",
       price: "18.00$",
-      image: "/antipasti/caprese.jpg",
+      image: "/antipasti/Caprese.jpg",
     },
     {
       name: "Prosciutto e Melone",
       description:
         "Delicado jamón prosciutto italiano servido con melón fresco, una combinación suave y refrescante.",
       price: "18.00$",
-      image: "/antipasti/prosciutto e melone.png",
+      image: "/antipasti/Prosciutto-e-Melone.png",
     },
     {
       name: "Carpaccio di Manzo",
       description:
         "Finas láminas de res cruda, aderezadas con aceite de oliva, limón, parmesano y rúcula fresca.",
       price: "18.00$",
-      image: "/antipasti/carpaccio di manzo.jpg",
+      image: "/antipasti/Carpaccio-di-Manzo.jpg",
     },
   ],
 
@@ -106,27 +106,27 @@ const DataMenu: Record<string, Menuitem[]> = {
       description:
         "Pechuga de pollo empanizada con salsa de tomate y queso gratinado.",
       price: "28.00$",
-      image: "/secondipiatti/pollo alla parmesano.jpg",
+      image: "/secondipiatti/pollo-alla-parmesano.jpg",
     },
     {
       name: "Salmone alla Griglia",
       description: "Salmón a la parrilla con limón y hierbas italianas.",
       price: "32.00$",
-      image: "/secondipiatti/salmone alla griglia.jpg",
+      image: "/secondipiatti/Salmone-alla-Griglia.jpg",
     },
     {
       name: "Bistecca alla Griglia",
       description:
         "Corte de res a la parrilla acompañado de vegetales salteados.",
       price: "35.00$",
-      image: "/secondipiatti/bistec alla grilla.jpg",
+      image: "/secondipiatti/bistec-alla-grilla.jpg",
     },
     {
       name: "Orata al Forno",
       description:
         "Dorada al horno con hierbas aromáticas, aceite de oliva y limón, servida jugosa y llena de sabor.",
       price: "35.00$",
-      image: "/secondipiatti/orata al horno.jpg",
+      image: "/secondipiatti/orata-al-horno.jpg",
     },
   ],
 
@@ -141,7 +141,7 @@ const DataMenu: Record<string, Menuitem[]> = {
       name: "Panna Cotta",
       description: "Crema cocida con salsa de frutos rojos.",
       price: "14.00$",
-      image: "/postres/panna cotta.jpg",
+      image: "/postres/Panna-Cotta.jpg",
     },
     {
       name: "Gelato Artigianale",
@@ -154,7 +154,7 @@ const DataMenu: Record<string, Menuitem[]> = {
       description:
         "Crujientes tubos de masa rellenos de crema dulce de ricotta, con un toque de vainilla y chocolate.",
       price: "12.00$",
-      image: "/postres/cannoli siciliani.jpg",
+      image: "/postres/Cannoli-Siciliani.jpg",
     },
   ],
 
@@ -163,7 +163,7 @@ const DataMenu: Record<string, Menuitem[]> = {
       name: "Agua Mineral",
       description: "Agua mineral con o sin gas.",
       price: "6.00$",
-      image: "/bebidas/Agua mineral.jpg",
+      image: "/bebidas/agua-mineral.jpg",
     },
     {
       name: "Limonata Italiana",
@@ -175,7 +175,7 @@ const DataMenu: Record<string, Menuitem[]> = {
       name: "Coca-Cola",
       description: "Bebida gaseosa clásica.",
       price: "7.00$",
-      image: "/bebidas/Coca cola.jpg",
+      image: "/bebidas/coca-cola.jpg",
     },
     {
       name: "Vino de la Casa",
@@ -190,31 +190,6 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-/**
- * Renders a menu page displaying items for a specific menu category.
- * 
- * @async
- * @function Menu
- * @param {Props} props - The component props
- * @param {Promise<{ slug: string }>} props.params - Route parameters containing the menu slug
- * @returns {Promise<JSX.Element>} A JSX element displaying a grid of menu items
- * 
- * @description
- * Fetches menu items based on the slug parameter and displays them in a responsive grid layout.
- * Each item card includes:
- * - Item name and description
- * - Product image (if available)
- * - Price
- * - "Agregar" (Add) button for cart functionality
- * 
- * The grid is responsive with 1 column on mobile, 2 columns on medium screens, and adjusts gap spacing.
- * Cards include hover scale animation effect.
- * 
- * @example
- * // Usage in Next.js app router
- * // Route: /menu/pizzas
- * <Menu params={Promise.resolve({ slug: 'pizzas' })} />
- */
 export default async function Menu({ params }: Props) {
   const { slug } = await params;
   const items = DataMenu[slug];
