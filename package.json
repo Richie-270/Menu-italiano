@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "engines": {
-    "node": "18.x"
-  },
+"engines": {
+  "node": "20.x"
+},
   "dependencies": {
     "lucide-react": "^0.562.0",
     "next": "^16.1.4",
